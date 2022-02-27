@@ -1,7 +1,8 @@
 import discord
 from discord.ext.commands import Bot
+import os
 
-TOKEN = 'OTQ3MTIzNDM2NTA4MDIwNzM2.Yhorbw.Rk8em1vnLUgnTqA_NGVQ5hH_P7A'
+
 intents = discord.Intents.default()
 bot = Bot(command_prefix='!kebi ', intents=intents)
 bot.remove_command("help")
@@ -66,13 +67,13 @@ if __name__ == '__main__':
             await ctx.reply("아무도 없습니다!")
             return
 
-        msg = "== 현재 " + channel.name + "채널 접속 멤버 ==" + '\n'
+        msg = "== 현재 " + str(channel.name) + "채널 접속 멤버 ==" + '\n'
         msg += ("☑️ " + str(len(mems)) + "명 접속중" + '\n')
         msg += '\n'
         for mem in mems :
-            msg += (mem.nick + '\n')
+            msg += (str(mem.display_name) + '\n')
 
         else :
             await ctx.reply(msg)
 
-    bot.run(TOKEN)
+    bot.run(os.environ['TOKEN'])
