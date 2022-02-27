@@ -1,5 +1,7 @@
 # j2kb-discord-bot
 
+![KakaoTalk_20220226_224815112](https://user-images.githubusercontent.com/90634012/155870668-53a529f6-6f17-4ad0-b932-56d73e1ee406.png)
+
 J2KB 디스코드 봇 `공부하는케비` 입니다.  
 
 **부르는 법**  
